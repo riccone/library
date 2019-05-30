@@ -1,0 +1,21 @@
+{
+  "name": "moliyafaqbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "dev": "nodemon ./src/index.js"
+  },
+  "author": "by Khumoyunmirzo Sodiqov",
+  "license": "ISC",
+  "dependencies": {
+    "file-system": "^2.2.2",
+    "fs": "0.0.1-security",
+    "mysql": "^2.16.0",
+    "node-telegram-bot-api": "^0.30.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.11"
+  }
+}
