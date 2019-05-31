@@ -29,8 +29,14 @@ $this->params['breadcrumbs'][] = $this->title;
             //'id',
             'name',
             //'parent_id',
-            
-			'status',
+
+            [
+                'attribute' => 'status',
+                'format' => 'raw',
+                'value' => function($data){
+                    return $data->status ? '<span class="text-success">Опубликовано</span>' : '<span class="text-danger">Не опубликовано</span>';
+                }
+            ],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
