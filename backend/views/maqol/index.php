@@ -10,7 +10,7 @@ use yii\widgets\Pjax;
 $this->title = 'Maqols';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="maqol-index">
+<div class="maqol-index panel panel-info" style="padding:10px;">
 
 <!--    <h1>--><?//= Html::encode($this->title) ?><!--</h1>-->
     <?php Pjax::begin(); ?>

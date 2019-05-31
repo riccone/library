@@ -12,7 +12,7 @@ $this->title = 'Книги';
 $this->params['breadcrumbs'][] = $this->title;
 //var_dump($model = Books::findOne($dataProvider->id));
 ?>
-<div class="books-index">
+<div class="books-index panel panel-info" style="padding:10px;">
 
 <!--    <h1>--><?//= Html::encode($this->title) ?><!--</h1>-->
     <?php Pjax::begin(); ?>

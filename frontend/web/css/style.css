@@ -3024,12 +3024,15 @@ h3.widget-title-modal {
   font-size: 60px;
 }
 .slide .slider__content h2 {
-  color: #3c3c3c;
-  font-size: 40px;
+  color: #fff;
+  font-size: 45px;
   font-family: poppins;
   font-weight: 400;
   line-height: 1.2;
-  text-shadow: #e0e0e0 1px 1px 0;
+  /*text-shadow: #e0e0e0 1px 1px 0;*/
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
 }
 .slide .slider__content h1 {
   color: #fff;
@@ -3067,7 +3070,7 @@ h3.widget-title-modal {
   .slide .slider__content a.shopbtn:hover {
     color: #e59285; }
     .slider--15 .slide .slider__content h2 span {
-      color: #ce7852; }
+      color: #fff; }
   .slider--15 .slide .slider__content h1 {
     color: #3c3c3c;
     font-family: "tex_gyre_adventorbold";
@@ -5939,7 +5942,8 @@ a.checkout__title {
   margin-left: 10px;
   padding: 0 10px; }
 .list__view {
-  display: flex; }
+  display: flex;
+margin: 10px;  }
   .list__view .thumb {
     flex-basis: 30%;
     overflow: hidden;

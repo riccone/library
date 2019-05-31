@@ -55,6 +55,10 @@ class Tags extends \yii\db\ActiveRecord
     public static function getAll(){
         return Tags::find()->all();
     }
+	
+	public static function getTen(){
+        return Tags::find()->limit(10)->all();
+    }
 
     /**
      * @return \yii\db\ActiveQuery

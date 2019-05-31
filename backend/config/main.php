@@ -8,6 +8,7 @@ $params = array_merge(
 
 return [
     'id' => 'app-backend',
+	'language' => 'ru', 
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
@@ -17,6 +18,7 @@ return [
             'theme' => [
                 'pathMap' => [
                     '@app/views' => '@app/views'
+					//'@app/views' => '@vendor/dmstr/yii2-adminlte-asset/example-views/yiisoft/yii2-app'
                 ],
             ],
         ],
@@ -45,13 +47,20 @@ return [
             'errorAction' => 'site/error',
         ],
 
+		'request' => [
+			'baseUrl' => '/admin',
+		],
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            'rules' => [
-            ],
+			'rules' => [
+				'' => 'site/index',                                
+				'<controller:\w+>/<action:\w+>/' => '<controller>/<action>',
+			],
         ],
 
     ],
     'params' => $params,
 ];
+
+

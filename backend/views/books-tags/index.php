@@ -10,7 +10,7 @@ use yii\widgets\Pjax;
 $this->title = 'Books Tags';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="books-tags-index">
+<div class="books-tags-index panel panel-info" style="padding:10px;">
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php Pjax::begin(); ?>

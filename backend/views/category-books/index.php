@@ -10,7 +10,7 @@ use yii\widgets\Pjax;
 $this->title = 'Категория Книг';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="category-books-index">
+<div class="category-books-index panel panel-info" style="padding:10px;">
 
 <!--    <h1>--><?//= Html::encode($this->title) ?><!--</h1>-->
     <?php Pjax::begin(); ?>
@@ -26,10 +26,11 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
+            //'id',
             'name',
-            'parent_id',
-            'status',
+            //'parent_id',
+            
+			'status',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
