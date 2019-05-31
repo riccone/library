@@ -7,7 +7,7 @@ use yii\helpers\Html;
 
 <header class="main-header">
 
-    <?= Html::a('<span class="logo-mini">APP</span><span class="logo-lg">' . Yii::$app->name . '</span>', Yii::$app->homeUrl, ['class' => 'logo']) ?>
+    <?= Html::a('<span class="logo-mini">LIB</span><span class="logo-lg">Kutubxona</span>', Yii::$app->homeUrl, ['class' => 'logo']) ?>
 
     <nav class="navbar navbar-static-top" role="navigation">
 
@@ -321,25 +321,25 @@ use yii\helpers\Html;
 
                             <p>
                                 <?php echo Yii::$app->user->identity->username ?> - Web Developer
-                                <small>Member since Nov. 2012</small>
+<!--                                <small>Member since Nov. 2012</small>-->
                             </p>
                         </li>
-                        <!-- Menu Body -->
-                        <li class="user-body">
-                            <div class="col-xs-4 text-center">
-                                <a href="#">Followers</a>
-                            </div>
-                            <div class="col-xs-4 text-center">
-                                <a href="#">Sales</a>
-                            </div>
-                            <div class="col-xs-4 text-center">
-                                <a href="#">Friends</a>
-                            </div>
-                        </li>
+                      <!-- Menu Body -->
+<!--                        <li class="user-body">-->
+<!--                            <div class="col-xs-4 text-center">-->
+<!--                                <a href="#">Followers</a>-->
+<!--                            </div>-->
+<!--                            <div class="col-xs-4 text-center">-->
+<!--                                <a href="#">Sales</a>-->
+<!--                            </div>-->
+<!--                            <div class="col-xs-4 text-center">-->
+<!--                                <a href="#">Friends</a>-->
+<!--                            </div>-->
+<!--                        </li>-->
                         <!-- Menu Footer-->
                         <li class="user-footer">
                             <div class="pull-left">
-                                <a href="#" class="btn btn-default btn-flat">Profile</a>
+<!--                                <a href="#" class="btn btn-default btn-flat">Profile</a>-->
                             </div>
                             <div class="pull-right">
                                 <?= Html::a(
