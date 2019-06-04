@@ -29,8 +29,8 @@ $this->params['breadcrumbs'][] = $this->title;
             //'id',
             'name',
             //'parent_id',
-
-            [
+            
+			[
                 'attribute' => 'status',
                 'format' => 'raw',
                 'value' => function($data){

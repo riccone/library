@@ -37,7 +37,8 @@ class DocUpload extends Model
     }
 
     private function getFolder(){
-        return Yii::getAlias('@web') . 'uploads/docs/';
+        //return Yii::getAlias('@web') . 'uploads/docs/';
+        return 'uploads/docs/';
     }
 
     private function genereteFilename(){

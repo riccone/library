@@ -3,7 +3,7 @@ use yii\helpers\Url;?>
 <!-- Start Slider area -->
 <div class="slider-area brown__nav slider--15 slide__activation slide__arrow01 owl-carousel owl-theme">
     <!-- Start Single Slide -->
-    <div class="slide animation__style10 bg-image--1 fullscreen align__center--left">
+    <div class="slide animation__style07 bg-image--1 fullscreen align__center--left">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -20,7 +20,7 @@ use yii\helpers\Url;?>
     </div>
     <!-- End Single Slide -->
     <!-- Start Single Slide -->
-    <div class="slide animation__style10 bg-image--7 fullscreen align__center--left">
+    <div class="slide animation__style06 bg-image--7 fullscreen align__center--left">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
