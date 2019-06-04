@@ -137,7 +137,7 @@ class Books extends \yii\db\ActiveRecord
 
     public function saveTags(array $tags)
     {
-        if (is_array($tags) && !isset($tags)){
+        if (is_array($tags) && isset($tags)){
             $this->clearCurrentTags();
 
             foreach ($tags as $tag_id){
