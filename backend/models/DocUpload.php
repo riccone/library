@@ -21,7 +21,7 @@ class DocUpload extends Model
     {
         return [
             [['document'], 'required'],
-            [['document'], 'file', 'extensions' => 'pdf']
+            [['document'], 'file', 'extensions' => 'pdf, mp3, wav']
         ];
     }
 

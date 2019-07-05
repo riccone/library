@@ -16,15 +16,19 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-<!--        --><?//= Html::a('Teg', ['set-tags', 'id' => $model->id], ['class' => 'btn btn-success']) ?>
-        <?php if ($model->status != 1){?>
-        <?= Html::a('Опубликовать', ['publish', 'id' => $model->id], ['class' => 'btn btn-success']) ?>
-        <?php }?>
-        <?php if ($model->status == 1){?>
-        <?= Html::a('Не опубликовать', ['unpublish', 'id' => $model->id], ['class' => 'btn btn-danger']) ?>
-        <?php }?>
+        <!--        --><? //= Html::a('Teg', ['set-tags', 'id' => $model->id], ['class' => 'btn btn-success']) ?>
+        <?php if ($model->status != 1) { ?>
+            <?= Html::a('Опубликовать', ['publish', 'id' => $model->id], ['class' => 'btn btn-success']) ?>
+        <?php } ?>
+        <?php if ($model->status == 1) { ?>
+            <?= Html::a('Не опубликовать', ['unpublish', 'id' => $model->id], ['class' => 'btn btn-danger']) ?>
+        <?php } ?>
         <?= Html::a('Загрузить изображение', ['set-image', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Загрузить документ', ['set-document', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?php if ($model->category_id == 14) { ?>
+            <?= Html::a('Загрузить аудио', ['set-document', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?php } else { ?>
+            <?= Html::a('Загрузить документ', ['set-document', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?php } ?>
         <?= Html::a('Редактировать', ['update', 'id' => $model->id], ['class' => 'btn btn-default']) ?>
         <?= Html::a('Удалить', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
@@ -48,7 +52,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'attribute' => 'status',
                 'format' => 'raw',
-                'value' => function($data){
+                'value' => function ($data) {
                     return $data->status ? '<span class="text-success">Опубликовано</span>' : '<span class="text-danger">Не опубликовано</span>';
                 }
             ],
