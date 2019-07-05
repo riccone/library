@@ -62,20 +62,21 @@ use yii\helpers\Url;
                     </div>
                     <br>
                     <div class="row">
-                    <div class="col-lg-12 col-12">
-                        <? if ($book->category_id != 14) {?>
-                        <?= \yii2assets\pdfjs\PdfJs::widget([
-                            'width'=>'100%',
-                            'height'=> '800px',
-                            'url'=> Url::base().$book->getDoc()
-                        ]); ?>
-                        <? } else {?>
-                            <audio id="player" controls>
-                                <source src='<?=$book->document?>' type="audio/mp3" />
-                                <source src='<?=$book->document?>' type="audio/ogg" />
-                            </audio>
-                        <? }?>
-                    </div>
+                        <div class="col-lg-12 col-12">
+                            <? if ($book->category_id != 14) {?>
+                                <?= \yii2assets\pdfjs\PdfJs::widget([
+                                    'width'=>'100%',
+                                    'height'=> '800px',
+                                    'url'=> Url::base().$book->getDoc()
+                                ]); ?>
+                            <? } else {?>
+                                <? $doc = Url::base().$book->getDoc();?>
+                                <audio id="player" controls>
+                                    <source src='<? echo $doc;?>' type="audio/mp3" />
+
+                                </audio>
+                            <? }?>
+                        </div>
                     </div>
                 </div>
 
