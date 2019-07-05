@@ -28,7 +28,7 @@ $modelsearch = new BooksSearch();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php $this->registerCsrfMetaTags() ?>
     <title>Moliya vazirligi kutubxonasi</title>
-<!--    --><?//= Html::encode($this->title) ?>
+    <!--    --><?//= Html::encode($this->title) ?>
 
     <!-- Favicons -->
     <link rel="shortcut icon" href="/images/favicon.ico">
@@ -63,7 +63,7 @@ $modelsearch = new BooksSearch();
                 <div class="col-md-4 col-sm-4 col-7 col-lg-2">
                     <div class="logo">
                         <a href="/">
-                            <img src="/images/logo/logo1.png" alt="logo images">
+                            <img src="/images/logo/logo-head2.png" alt="logo images">
                         </a>
                     </div>
                 </div>
@@ -111,17 +111,17 @@ $modelsearch = new BooksSearch();
     <!-- //Header -->
     <!-- Start Search Popup -->
     <div class="box-search-content search_active block-bg close__top">
-<!--        --><?php //$form = ActiveForm::begin() ?>
+        <!--        --><?php //$form = ActiveForm::begin() ?>
         <form id="search_mini_form" class="minisearch" action="#">
             <div class="field__search">
                 <input type="text" placeholder="Search entire store here...">
-<!--                --><?//= $form->field($modelsearch, 'name')->textInput()->label('') ?>
+                <!--                --><?//= $form->field($modelsearch, 'name')->textInput()->label('') ?>
                 <div class="action">
                     <a href="#"><i class="zmdi zmdi-search"></i></a>
                 </div>
             </div>
         </form>
-<!--        --><?php //$form = ActiveForm::end() ?>
+        <!--        --><?php //$form = ActiveForm::end() ?>
         <div class="close__wrap">
             <span>close</span>
         </div>
@@ -140,7 +140,7 @@ $modelsearch = new BooksSearch();
                         <div class="footer__widget footer__menu">
                             <div class="ft__logo">
                                 <a href="/">
-                                    <img src="/images/logo/logo2.png" alt="logo">
+                                    <img src="/images/logo/logo-foot.png" alt="logo">
                                 </a>
                                 <p>Saytdan olingan ma'lumotlardan foydalanilganda O'zbekiston Respublikasi Moliya vazirligining rasmiy veb sayti www.mf.uz ko‘rsatilishi shart. Saytni ishlab chiqish va qo'llab-quvvatlash Moliya vazirligi AHM tomonidan amalga oshiriladi</p>
                             </div>
