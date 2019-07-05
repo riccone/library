@@ -40,7 +40,7 @@ class BooksSearch extends Books
      */
     public function search($params)
     {
-        $query = Books::find();
+        $query = Books::find()->orderBy(['date_added' => SORT_DESC]);;
 
         // add conditions that should always apply here
 

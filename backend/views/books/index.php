@@ -33,7 +33,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 'format' => 'raw',
                 'value' => function($data){
                     return $data->status ? '<span class="text-success">Опубликовано</span>' : '<span class="text-danger">Не опубликовано</span>';
-                }
+                },
+                'filter' => [ "1"=>"Опубликовано", "0"=>"Не опубликовано" ]
             ],
             'name',
             //'description:ntext',
@@ -57,7 +58,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 }
             ],
             //'category_id',
-            //'date_added',
+            'date_added',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
