@@ -192,7 +192,7 @@ class BooksController extends Controller
 
 
     public static function getAllBooks($pageSize = 12){
-        $query = Books::find()->where(['status' => 1]);
+        $query = Books::find()->where(['status' => 1])->orderBy(['date_added' => SORT_DESC]);;
         $countQuery = clone $query;
         $pages = new Pagination(['totalCount' => $countQuery->count(), 'pageSize' => $pageSize]);
         $books = $query->offset($pages->offset)
