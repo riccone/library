@@ -42,7 +42,7 @@ class BooksController extends Controller
     {
         $categories = CategoryBooks::getAll();
         $data = self::getAllBooks(12);
-        $best = self::getBestBooks(3);
+        $best = self::getBestBooks(4);
         $maqollar = Maqol::getAll();
 
 //        echo(Yii::getAlias('@frontend').'/web/uploads/images/');die();

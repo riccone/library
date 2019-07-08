@@ -1,9 +1,11 @@
 <?php
 
+use backend\models\Authors;
 use frontend\models\CategoryBooks;
 use frontend\models\Tags;
 use yii\helpers\Url;
 
+$authors = Authors::find()->orderBy('RAND()')->limit(5)->all();
 $categories = CategoryBooks::getAll();
 $tags = Tags::getTen();
 ?>
@@ -13,28 +15,27 @@ $tags = Tags::getTen();
         <aside class="wedget__categories poroduct--cat">
             <h3 class="wedget__title">Kitob toifalari</h3>
             <ul>
-                <?php foreach ($categories as $cat):?>
-                    <li><a href="<?= Url::toRoute(['books/category', 'id' => $cat->id])?>"><?= $cat->name?> <span>(<?= $cat->getBooksCountity();?>)</span></a></li>
-                <?php endforeach;?>
+                <?php foreach ($categories as $cat): ?>
+                    <li><a href="<?= Url::toRoute(['books/category', 'id' => $cat->id]) ?>"><?= $cat->name ?>
+                            <span>(<?= $cat->getBooksCountity(); ?>)</span></a></li>
+                <?php endforeach; ?>
+            </ul>
+        </aside>
+        <aside class="wedget__categories poroduct--cat">
+            <h3 class="wedget__title">Shoir va yozuvchilar</h3>
+            <ul>
+                <?php foreach ($authors as $author): ?>
+                    <li><a href="<?= Url::toRoute(['authors/view', 'id' => $author->id]) ?>"><?= $author->firstname.' '.$author->lastname; ?></a></li>
+                <?php endforeach; ?>
             </ul>
         </aside>
         <aside class="wedget__categories poroduct--tag">
             <h3 class="wedget__title">Heshteglar</h3>
             <ul>
-                <?php foreach ($tags as $tag):?>
-                    <li><a href="<?= Url::toRoute(['books/tags', 'id' => $tag->id])?>"><?= $tag->name?></a></li>
-                <?php endforeach;?>
+                <?php foreach ($tags as $tag): ?>
+                    <li><a href="<?= Url::toRoute(['books/tags', 'id' => $tag->id]) ?>"><?= $tag->name ?></a></li>
+                <?php endforeach; ?>
             </ul>
-        </aside>
-        <aside class="wedget__categories sidebar--banner">
-            <h3 class="wedget__title">Eng ko`p o`qilgan</h3>
-            <?php foreach ($best as $best1):?>
-                <div class="col-lg-12 col-md-12 col-sm-12">
-                    <div style="padding: 15px">
-                        <a class="first__img" href="<?= Url::toRoute(['books/view', 'id' => $best1->id])?>"><img src="<?= $best1->getImage();?>" alt="product image"></a>
-                    </div>
-                </div>
-            <?php endforeach;?>
         </aside>
     </div>
 </div>
