@@ -35,6 +35,17 @@
                     ['label' => 'Книги', 'icon' => 'book', 'url' => ['/books']],
                     ['label' => 'Тегы', 'icon' => 'tag', 'url' => ['/tags']],
                     ['label' => 'Пословицы', 'icon' => 'angellist', 'url' => ['/maqol']],
+                    ['label' => 'Авторы', 'icon' => 'user', 'url' => ['/authors']],
+//                    [
+//                        'label' => 'Автор книг',
+//                        'icon' => 'user',
+//                        'url' => '#',
+//                        'items' => [
+//                            ['label' => 'Авторы', 'icon' => 'user', 'url' => ['/authors'],],
+//                            ['label' => 'Биография авторов', 'info' => 'dashboard', 'url' => ['/author-biography'],],
+//
+//                        ],
+//                    ],
 //                    ['label' => 'Связка тегов', 'icon' => 'book', 'url' => ['/books-tags']],
 //                    ['label' => 'Новости', 'icon' => 'bullhorn', 'url' => ['/news']],
 //                    ['label' => 'Категории новость', 'icon' => 'tasks', 'url' => ['/category-news']],
