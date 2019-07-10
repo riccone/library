@@ -81,7 +81,7 @@ $modelsearch = new BooksSearch();
                                     </ul>
                                 </div>
                             </li>
-                            <li><a href="\site\about">Bog`lanish</a></li>
+                            <li><a href="/frontend/web/authors/">Shoir va yozuvchilar</a></li>
                         </ul>
                     </nav>
                 </div>

@@ -3,9 +3,11 @@
 namespace frontend\controllers;
 
 use backend\models\ImageUpload;
+use frontend\models\Maqol;
 use Yii;
 use backend\models\Authors;
 use backend\models\AuthorsSearch;
+use yii\data\Pagination;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -37,12 +39,16 @@ class AuthorsController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new AuthorsSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $data = self::getAllAuthors(12);
+        $maqollar = Maqol::getAll();
+
+//        echo(Yii::getAlias('@frontend').'/web/uploads/images/');die();
 
         return $this->render('index', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
+            'authors' => $data['authors'],
+            'pages' => $data['pages'],
+            'maqollar' => $maqollar,
+
         ]);
     }
 
@@ -125,5 +131,17 @@ class AuthorsController extends Controller
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
+    }
+
+    public static function getAllAuthors($pageSize = 12){
+        $query = Authors::find();
+        $countQuery = clone $query;
+        $pages = new Pagination(['totalCount' => $countQuery->count(), 'pageSize' => $pageSize]);
+        $author = $query->offset($pages->offset)
+            ->limit($pages->limit)
+            ->all();
+        $data['pages'] = $pages;
+        $data['authors'] = $author;
+        return $data;
     }
 }

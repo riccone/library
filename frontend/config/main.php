@@ -42,6 +42,10 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+//                '/' => 'books/index',
+                'author' => '/frontend/web/authors/',
+                'contact' => 'site/contact',
+                'login' => 'site/login',
             ],
         ],
     ],
