@@ -74,7 +74,7 @@ use yii\helpers\Url; ?>
                                         </div>
                                         <div class="product__content content--center">
                                             <h4>
-                                                <a href="<?= Url::toRoute(['authors/view', 'id' => $author->id]) ?>"><?= $author->firstname ?></a>
+                                                <a href="<?= Url::toRoute(['authors/view', 'id' => $author->id]) ?>"><?= $author->firstname ?> <?= $author->lastname ?></a>
                                             </h4>
                                             <br><br>
 
@@ -109,7 +109,7 @@ use yii\helpers\Url; ?>
                                         </div>
                                         <div class="content">
                                             <h2>
-                                                <a href="<?= Url::toRoute(['books/view', 'id' => $author->id]) ?>"><?= $author->firstname ?></a>
+                                                <a href="<?= Url::toRoute(['books/view', 'id' => $author->id]) ?>"><?= $author->firstname ?> <?= $author->lastname ?></a>
                                             </h2>
                                             <!--                                            <p><span style="color: darkred;"> Toifa : </span>--><? //= $book1->category->name?>
                                             <!--                                                <br><span style="color: darkred;"> Muallif : </span>--><? //= $book1->author?>

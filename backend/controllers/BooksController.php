@@ -148,21 +148,21 @@ class BooksController extends Controller
 
     public function actionSetImage($id){
 
-        $model = new ImageUpload();
+    $model = new ImageUpload();
 
-        if(Yii::$app->request->isPost){
+    if(Yii::$app->request->isPost){
 
-            $book = $this->findModel($id);
-            $file = UploadedFile::getInstance($model, 'image');
+        $book = $this->findModel($id);
+        $file = UploadedFile::getInstance($model, 'image');
 
 //            $book->saveImage($model->uploadFile($file, $book->image));
-            if ($book->saveImage($model->uploadFile($file, $book->image))){
-                return $this->redirect(['view', 'id' => $book->id]);
-            }
+        if ($book->saveImage($model->uploadFile($file, $book->image))){
+            return $this->redirect(['view', 'id' => $book->id]);
         }
-
-        return $this->render('image', ['model' => $model]);
     }
+
+    return $this->render('image', ['model' => $model]);
+}
 
     public function actionSetDocument($id){
         $model = new DocUpload();
